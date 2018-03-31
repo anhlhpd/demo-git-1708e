@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mypack;
+package entity;
 
 /**
  *
@@ -12,6 +12,7 @@ package mypack;
 public class Account {
     private int id;
     private String name;
+    private int balance;
 
     public int getId() {
         return id;
@@ -29,11 +30,19 @@ public class Account {
         this.name = name;
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
     public Account(){}
     
-    public Account(int id, String name) {
+    public Account(int id, String name, int balance) {
         this.id = id;
         this.name = name;
+        this.balance = balance;
     }
-    
 }
