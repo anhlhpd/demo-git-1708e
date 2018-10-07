@@ -19,7 +19,7 @@ public class AccountModel {
 
     public void save(Account acc) throws SQLException {
         Connection cnn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306", "root", "");
+                "jdbc:mysql://localhost:3306/quanlytaikhoannganhang?useUnicode=utf-8", "root", "");
         Statement stt = cnn.createStatement();
         stt.execute("insert into accounts (name, balance) values (" + acc.getName() + ", " + acc.getBalance() + ")");
     }
